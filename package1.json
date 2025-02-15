@@ -1,4 +1,4 @@
-# esp32s-versel-proxy{
+{
   "name": "esp32-vercel-proxy",
   "version": "1.0.0",
   "dependencies": {
