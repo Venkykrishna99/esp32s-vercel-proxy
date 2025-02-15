@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        const TARGET_URL = "http://electronova.42web.io/esp8266/save_data.php"; // Update this!
+        const TARGET_URL = "http://electronova.infinityfreeapp.com/esp8266/save_data.php"; // Update this!
 
         const response = await axios.post(TARGET_URL, req.body, {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
