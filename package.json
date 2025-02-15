@@ -1,1 +1,8 @@
 
+{
+  "name": "esp32s-vercel-proxy",
+  "version": "1.0.0",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
