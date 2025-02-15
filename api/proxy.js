@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        const TARGET_URL = "http://electronova.42web.io/esp8266/save_data.php"; // Change this!
+        const TARGET_URL = "http://electronova.42web.io/esp8266/save_data.php"; // Update this!
 
         const response = await axios.post(TARGET_URL, req.body, {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -14,6 +14,7 @@ export default async function handler(req, res) {
 
         return res.status(200).json(response.data);
     } catch (error) {
-        return res.status(500).json({ error: "Failed to forward request" });
+        console.error("Proxy Error:", error.message);
+        return res.status(500).json({ error: "Failed to forward request", details: error.message });
     }
 }
